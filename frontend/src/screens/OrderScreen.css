@@ -1,0 +1,45 @@
+.order-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.order-info p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+.item-header {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.order-items {
+  margin-top: 1rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}

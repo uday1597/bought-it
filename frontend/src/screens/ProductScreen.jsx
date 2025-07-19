@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const ProductScreen = () => {
+    const navigate = useNavigate();
+
   const { id: productId } = useParams();
   const [product, setProduct] = useState({});
 
@@ -17,6 +20,10 @@ const ProductScreen = () => {
 
     fetchProduct();
   }, [productId]);
+ const addToCartHandler = () => {
+  navigate(`/cart/${productId}`);
+};
+
 
   return (
     <>
@@ -68,6 +75,7 @@ const ProductScreen = () => {
                   className="btn-block"
                   type="button"
                   disabled={product.countInStock === 0}
+                  onClick={addToCartHandler}
                 >
                   Add To Cart
                 </Button>
