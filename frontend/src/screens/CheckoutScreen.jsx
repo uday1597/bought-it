@@ -40,7 +40,7 @@ const CheckoutScreen = () => {
       };
 
       const { data } = await axios.post(
-        '/api/orders',
+        `${process.env.REACT_APP_API_URL}/api/orders`,
         {
           orderItems: cartItems,
           shippingAddress,

@@ -14,7 +14,7 @@ const CartScreen = () => {
     useEffect(() => {
         const fetchProductAndAdd = async () => {
             if (productId) {
-                const { data } = await axios.get(`/api/products/${productId}`);
+                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/${productId}`);
                 const item = {
                     product: data._id,
                     name: data.name,

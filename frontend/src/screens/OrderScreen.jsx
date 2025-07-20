@@ -10,7 +10,7 @@ const OrderScreen = () => {
 
   useEffect(() => {
     const fetchOrder = async () => {
-      const { data } = await axios.get(`/api/orders/${id}`, {
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/orders/${id}`, {
         headers: { Authorization: `Bearer ${userInfo.token}` },
       });
       setOrder(data);

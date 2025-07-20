@@ -17,7 +17,7 @@ const LoginScreen = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("/api/users/login", { email, password });
+            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/users/login`, { email, password });
             login(data);
             navigate("/");
         } catch (err) {
