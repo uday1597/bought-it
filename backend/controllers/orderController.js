@@ -53,7 +53,6 @@ const getOrderById = asyncHandler(async (req, res) => {
 // @access Private
 const getMyOrders = async (req, res) => {
   try {
-    console.log('in get my orders',req.user._id)
     const orders = await Order.find({ user: req.user._id });
     res.json(orders);
   } catch (error) {
