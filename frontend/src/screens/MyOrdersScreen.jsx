@@ -22,7 +22,7 @@ const MyOrdersScreen = () => {
             Authorization: `Bearer ${userInfo.token}`,
           },
         };
-        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/orders/myorders', config);
+        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/orders/myorders`, config);
         setOrders(data);
       } catch (error) {
         console.error('Failed to fetch orders', error);
